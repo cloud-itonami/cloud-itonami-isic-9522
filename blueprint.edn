@@ -1,0 +1,11 @@
+{:itonami.blueprint/id "cloud-itonami-9522"
+ :itonami.blueprint/name "Repair of household appliances and home and garden equipment"
+ :itonami.blueprint/isic-rev5 "9522"
+ :itonami.blueprint/domain :services/repair-household-appliances
+ :itonami.blueprint/license "AGPL-3.0-or-later"
+ :itonami.blueprint/social-impact [:community-access :data-sovereignty :transparency]
+ :itonami.blueprint/governor :repair-shop-governor
+ :itonami.blueprint/required-technologies [:robotics :identity :forms :dmn :bpmn :audit-ledger]
+ :itonami.blueprint/optional-technologies []
+ :itonami.blueprint/status :public-oss
+ :itonami.blueprint/robotics true}
