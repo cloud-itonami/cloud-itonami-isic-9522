@@ -1,4 +1,4 @@
-# cloud-itonami-9522
+# cloud-itonami-isic-9522
 
 Open Business Blueprint for **ISIC Rev.5 9522**: Repair of household appliances and home and garden equipment.
 

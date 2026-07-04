@@ -1,6 +1,6 @@
 # Governance
 
-`cloud-itonami-9522` is an OSS open-business blueprint for repair of household appliances and home and garden equipment -- diagnosing and repairing washing machines, lawn mowers and similar equipment for customers.
+`cloud-itonami-isic-9522` is an OSS open-business blueprint for repair of household appliances and home and garden equipment -- diagnosing and repairing washing machines, lawn mowers and similar equipment for customers.
 Governance covers both the capability layer and the operator model.
 
 ## Maintainers

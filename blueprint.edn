@@ -1,4 +1,4 @@
-{:itonami.blueprint/id "cloud-itonami-9522"
+{:itonami.blueprint/id "cloud-itonami-isic-9522"
  :itonami.blueprint/name "Repair of household appliances and home and garden equipment"
  :itonami.blueprint/isic-rev5 "9522"
  :itonami.blueprint/domain :services/repair-household-appliances

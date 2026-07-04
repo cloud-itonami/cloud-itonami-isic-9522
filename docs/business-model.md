@@ -2,7 +2,7 @@
 
 ## Classification
 
-- Repository: `cloud-itonami-9522`
+- Repository: `cloud-itonami-isic-9522`
 - ISIC Rev.5: `9522`
 - Activity: repair of household appliances and home and garden equipment -- diagnosing and repairing washing machines, lawn mowers and similar equipment for customers
 - Social impact: community access, data sovereignty, transparent audit
