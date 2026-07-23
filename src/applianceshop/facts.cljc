@@ -73,7 +73,16 @@
           :required-evidence ["Diagnosebericht (diagnostic report)"
                               "Ersatzteilnachweis (parts-used documentation)"
                               "Sicherheitsprüfungsprotokoll nach Reparatur (post-repair safety-test record)"
-                              "Sachkundenachweis Kältemittel (refrigerant-handling-certification record)"]}})
+                              "Sachkundenachweis Kältemittel (refrigerant-handling-certification record)"]}
+   "POL" {:name "Poland"
+          :owner-authority "Prezes Urzędu Ochrony Konkurencji i Konsumentów (UOKiK) / Urząd Dozoru Technicznego (UDT)"
+          :legal-basis "Rozporządzenie Parlamentu Europejskiego i Rady (UE) 2023/988 w sprawie ogólnego bezpieczeństwa produktów (GPSR); Ustawa z dnia 15 maja 2015 r. o substancjach zubożających warstwę ozonową oraz o niektórych fluorowanych gazach cieplarnianych (Dz.U. 2015 poz. 881), art. 20 -- obowiązek posiadania certyfikatu dla personelu wykonującego instalację, kontrolę szczelności, naprawę, konserwację lub serwisowanie stacjonarnych urządzeń chłodniczych, klimatyzacyjnych i pomp ciepła zawierających fluorowane gazy cieplarniane"
+          :national-spec "GPSR ogólne wymogi bezpieczeństwa produktów -- mają zastosowanie do produktów udostępnianych na rynku niezależnie od tego, czy są nowe, używane, naprawione lub odnowione (nadzór: Prezes UOKiK, kontrole: Inspekcja Handlowa); UDT certyfikat dla personelu -- wydawany po egzaminie teoretycznym i praktycznym przed komisją egzaminacyjną jednostki oceniającej personel"
+          :provenance "https://www.udt.gov.pl/uslugi-udt/szwo-i-f-gazy/certyfikat-dla-personelu"
+          :required-evidence ["Raport z diagnozy usterki (diagnostic report)"
+                              "Dokumentacja zużytych części zamiennych (parts-used documentation)"
+                              "Protokół badania bezpieczeństwa po naprawie (post-repair safety-test record)"
+                              "Certyfikat dla personelu UDT ds. czynników chłodniczych (refrigerant-handling-certification record)"]}})
 
 (defn spec-basis
   "The jurisdiction's requirement map, or nil -- nil means NO spec-basis,
