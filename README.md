@@ -140,7 +140,7 @@ independent layers enforce this (`applianceshop.governor`'s
 `:actuation/complete-repair`/`:actuation/return-appliance` high-
 stakes gate and `applianceshop.phase`'s phase table, which never puts
 either op in any phase's `:auto` set) -- see `applianceshop.phase`'s
-docstring and `test/applianceshop/phase_test.clj`'s
+docstring and `test/applianceshop/phase_test.kotoba`'s
 `repair-complete-never-auto-at-any-phase`/`appliance-return-never-
 auto-at-any-phase`. The actor may draft, check and recommend; a human
 repair technician is always the one who actually completes a repair
@@ -233,14 +233,14 @@ stack only -- no bespoke domain capability lib to reference at all.
 
 | File | Role |
 |---|---|
-| `src/applianceshop/store.cljc` | **Store** protocol -- `MemStore` ‖ `DatomicStore` (`langchain.db`) + append-only audit ledger + repair-completion AND appliance-return history (dual history, mirroring `repairshop`/9521's and `commrepair`/9512's own shape). The double-actuation guard checks dedicated `:repair-completed?`/`:appliance-returned?` booleans rather than a `:status` value |
-| `src/applianceshop/registry.cljc` | Repair-completion/appliance-return draft records, plus `parts-cost-matches-claim?` -- an HONEST, literal reuse of `repairshop.registry`'s/`commrepair.registry`'s own EXACT-MATCH independent-recompute check for the SAME real-world concern, not claimed as new |
-| `src/applianceshop/facts.cljc` | Per-jurisdiction consumer-product-safety AND refrigerant-handling-certification catalog (a genuine extension beyond `repairshop.facts`'s own product-safety-only catalog and `commrepair.facts`'s own data-protection catalog) with an official spec-basis citation per entry, honest coverage reporting |
-| `src/applianceshop/repairopsllm.cljc` | **RepairOps-LLM** -- `mock-advisor` ‖ `llm-advisor`; intake/jurisdiction-assessment/safety-screening/refrigerant-screening/repair-completion/appliance-return proposals |
-| `src/applianceshop/governor.cljc` | **Repair Shop Governor** -- 7 HARD checks (spec-basis · evidence-incomplete · parts-cost-mismatch, honest reuse · safety-test-not-passed, honest reuse · refrigerant-handling-certification-unconfirmed, unconditional evaluation, GENUINELY NEW, the 62nd grounding of this discipline · already-completed guard · already-returned guard) + 1 soft (confidence/actuation gate) |
-| `src/applianceshop/phase.cljc` | **Phase 0→3** -- read-only → assisted intake → assisted assess → supervised (repair completion/appliance return always human; ticket intake is the ONLY auto-eligible op, no direct capital risk) |
-| `src/applianceshop/operation.cljc` | **OperationActor** -- langgraph-clj StateGraph |
-| `src/applianceshop/sim.cljc` | demo driver |
+| `src/applianceshop/store.kotoba` | **Store** protocol -- `MemStore` ‖ `DatomicStore` (`langchain.db`) + append-only audit ledger + repair-completion AND appliance-return history (dual history, mirroring `repairshop`/9521's and `commrepair`/9512's own shape). The double-actuation guard checks dedicated `:repair-completed?`/`:appliance-returned?` booleans rather than a `:status` value |
+| `src/applianceshop/registry.kotoba` | Repair-completion/appliance-return draft records, plus `parts-cost-matches-claim?` -- an HONEST, literal reuse of `repairshop.registry`'s/`commrepair.registry`'s own EXACT-MATCH independent-recompute check for the SAME real-world concern, not claimed as new |
+| `src/applianceshop/facts.kotoba` | Per-jurisdiction consumer-product-safety AND refrigerant-handling-certification catalog (a genuine extension beyond `repairshop.facts`'s own product-safety-only catalog and `commrepair.facts`'s own data-protection catalog) with an official spec-basis citation per entry, honest coverage reporting |
+| `src/applianceshop/repairopsllm.kotoba` | **RepairOps-LLM** -- `mock-advisor` ‖ `llm-advisor`; intake/jurisdiction-assessment/safety-screening/refrigerant-screening/repair-completion/appliance-return proposals |
+| `src/applianceshop/governor.kotoba` | **Repair Shop Governor** -- 7 HARD checks (spec-basis · evidence-incomplete · parts-cost-mismatch, honest reuse · safety-test-not-passed, honest reuse · refrigerant-handling-certification-unconfirmed, unconditional evaluation, GENUINELY NEW, the 62nd grounding of this discipline · already-completed guard · already-returned guard) + 1 soft (confidence/actuation gate) |
+| `src/applianceshop/phase.kotoba` | **Phase 0→3** -- read-only → assisted intake → assisted assess → supervised (repair completion/appliance return always human; ticket intake is the ONLY auto-eligible op, no direct capital risk) |
+| `src/applianceshop/operation.kotoba` | **OperationActor** -- langgraph-clj StateGraph |
+| `src/applianceshop/sim.kotoba` | demo driver |
 | `test/applianceshop/*_test.clj` | governor contract · phase invariants · store parity · registry conformance · facts coverage |
 
 ## Business-process coverage (honest)
