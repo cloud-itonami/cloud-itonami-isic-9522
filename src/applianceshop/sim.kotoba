@@ -1,5 +1,5 @@
 (ns applianceshop.sim
-  "Demo driver -- `clojure -M:dev:run`. Walks a clean ticket through
+  "Demo driver -- `kbb -M:dev:run`. Walks a clean ticket through
   intake -> jurisdiction assessment -> post-repair safety screening ->
   refrigerant-handling-certification screening -> repair-completion
   proposal (always escalates) -> human approval -> commit, then
